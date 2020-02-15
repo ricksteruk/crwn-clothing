@@ -1,5 +1,3 @@
-import CartItem from "../../components/cart-item/cart-item.component";
-
 export const addItemToCart = (cartItems, cartItemToAdd) => {
     const existingCartItem = cartItems.find(
         cartItem => cartItem.id === cartItemToAdd.id 
@@ -26,6 +24,6 @@ export const removeItemFromCart = (cartItems, cartItemToRemove ) => {
         cartItem.id === cartItemToRemove.id
         ? { ...cartItem, quantity: cartItem.quantity - 1}
         : cartItem
-        )
+        );
 
 };
